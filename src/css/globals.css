@@ -1,0 +1,18 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #4a044e;
+  color: whitesmoke;
+  font-size: 16px;
+  line-height: 25px;
+}
+.items-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1em;
+}
