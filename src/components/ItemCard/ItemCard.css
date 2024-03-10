@@ -46,6 +46,13 @@
 .card-bot--favourite:hover {
     background-color: rgb(40, 40, 40);
 }
+.card-bot--favourite.favourited {
+    background-color: white;
+}
+.card-bot--favourite.favourited svg{
+    stroke: black;
+    stroke-width: 0.1;
+}
 .card-bot-header {
     display: flex;
     justify-content: space-between;
@@ -53,4 +60,80 @@
 }
 .author-subs {
     color: rgb(180, 162, 162);
+}
+.card-top {
+    position: relative;
+}
+.modal-activator {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.modal-activator:hover {
+    opacity: 1;
+}
+.card--modal-content { 
+    padding: 10px 40px;
+    width: 40vw;
+    color: black;
+    text-align: center;
+    position: relative;
+}
+.modal-content--p {
+    font-size: 18px;
+}
+.modal-content--heading {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 20px 0px;
+    line-height: 48px;
+}
+.modal-content--img {
+    width: 10em;
+}
+.modal-content--login {
+    margin: 15px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.login--pinterest {
+    padding: 10px 15px;
+    background-color: red;
+    color: white;
+ 
+    max-width: fit-content;
+    font-weight: 500;
+}
+.login--facebook {
+    padding: 10px 15px;
+    background-color: blue;
+    color: white;
+    font-weight: 500;;
+    max-width: fit-content;
+}
+.modal-content--close {
+    position: absolute;
+    display: block;
+    top: -10px;
+    right: -10px;
+    border-radius: 1234px;
+    width: 2em;
+    height: 2em;
+    transition: background-color 0.2s ease-in-out;
+}
+.close--icon {
+    width: 2em;
+    aspect-ratio: 1/1;
+}
+.modal-content--close:hover {
+    background-color: rgba(0,0,0,0.3);
 }

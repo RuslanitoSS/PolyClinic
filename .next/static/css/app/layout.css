@@ -94,8 +94,6 @@
 
 /* Fix mobile Safari increase font-size on landscape mode */
 html {
-    -moz-text-size-adjust: none;
-    -webkit-text-size-adjust: none;
     text-size-adjust: none;
 }
 
@@ -144,9 +142,6 @@ meter {
 }
 
 /* reset default text opacity of input placeholder */
-::-moz-placeholder {
-    color: unset;
-}
 ::placeholder {
     color: unset;
 }

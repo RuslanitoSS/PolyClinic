@@ -1,3 +1,5 @@
+"use client"
+
 import { itemsData } from "@/app/data";
 import ItemCard from "@/components/ItemCard/ItemCard";
 
@@ -13,6 +15,7 @@ export default function Home() {
               AuthorImgUrl={item.AuthorImgUrl}
               AuthorName={item.AuthorName}
               AuthorSubs={item.AuthorSubs}
+              favourited={item.favourited}
             />
           </li>
         )}

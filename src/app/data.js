@@ -6,6 +6,7 @@ export const itemsData = [
         AuthorImgUrl: "https://cdn.myanimelist.net/images/voiceactors/2/61876.jpg",
         AuthorName: "Tatsuki Fujimoto",
         AuthorSubs: 9999,
+        favourited: true,
     },
     {
         index: 1,
@@ -14,6 +15,7 @@ export const itemsData = [
         AuthorImgUrl: "https://cdn.myanimelist.net/images/voiceactors/2/61876.jpg",
         AuthorName: "Tatsuki Fujimoto",
         AuthorSubs: 9999,
+        favourited: true,
     },    {
         index: 2,
         itemName: "Some Chainsaw Man Art",
@@ -21,6 +23,7 @@ export const itemsData = [
         AuthorImgUrl: "https://cdn.myanimelist.net/images/voiceactors/2/61876.jpg",
         AuthorName: "Tatsuki Fujimoto",
         AuthorSubs: 9999,
+        favourited: false,
     },    {
         index: 3,
         itemName: "Some Chainsaw Man Art",
@@ -28,5 +31,6 @@ export const itemsData = [
         AuthorImgUrl: "https://cdn.myanimelist.net/images/voiceactors/2/61876.jpg",
         AuthorName: "Tatsuki Fujimoto",
         AuthorSubs: 9999,
+        favourited: false,
     }
 ]
