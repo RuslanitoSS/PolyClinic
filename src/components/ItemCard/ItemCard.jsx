@@ -65,15 +65,20 @@ const ItemCard = ({
                 </div>
 
                 <div className="card-bot--author">
-                    <div className="author-data">
-                        <span className="author-name">
+                    <div className="authors-data">
+                        <div className="studio-name">
                             {studios.map(studio => 
-                                studio.name + ' '
+                                  <a href={studio.url} target='_blank' className='studio-name--link'>
+                                    {' ' + studio.name}
+                                  </a>
                                 )}
-                        </span>
-                        <span className="author-subs">
-                            {"" + producers.map(producer => 
-                                " "  + producer.name 
+                               
+                        </div>
+                        <span className="producer-name">
+                        {producers.map(producer => 
+                                  <a href={producer.url} target='_blank' className='producer-name--link'>
+                                    {' ' + producer.name}
+                                  </a>
                                 )}
                         </span>
                     </div>

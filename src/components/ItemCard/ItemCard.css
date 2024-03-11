@@ -7,6 +7,8 @@
 .card-top-img {
     height: 320px;  
     user-select: none;
+    object-fit: cover;
+    object-position: center;
 }
 
 .card-bot--author {
@@ -29,9 +31,15 @@
     font-weight: 500;
     max-width: 200px;
 }
-.author-name {
-    display: block;
+.studio-name {
     font-weight: 500;
+}
+.studio-name--link::before {
+    content: ",";
+}
+.studio-name--link:first-child::before {
+    content: "";
+
 }
 .card-bot--favourite{
     display: flex;
@@ -59,8 +67,16 @@
     justify-content: space-between;
     align-items: center;
 }
-.author-subs {
+.producer-name {
     color: rgb(180, 162, 162);
+}
+
+.producer-name--link::before {
+    content: ",";
+}
+.producer-name--link:first-child::before {
+    content: "";
+
 }
 .card-top {
     position: relative;
@@ -75,7 +91,7 @@
     display: block;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.5);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
