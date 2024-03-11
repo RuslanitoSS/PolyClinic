@@ -72,8 +72,8 @@ const ItemCard = ({
                                 )}
                         </span>
                         <span className="author-subs">
-                            {producers.map(producer => 
-                                producer.name + ' '
+                            {"" + producers.map(producer => 
+                                " "  + producer.name 
                                 )}
                         </span>
                     </div>
