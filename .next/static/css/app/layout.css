@@ -247,12 +247,21 @@ main {
   border-radius: 4px;
   background-color: rgba(0,0,0,0.2);
   border: 1px solid black;
-  width: 30px;
+  padding: 0 10px;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 500;
+}
+.pagination-list--btn >* {
+cursor: pointer;
+}
+.pagination-list--end-btn > * {
+  cursor: pointer;
+}
+.pagination-list--start-btn > * {
+  cursor: pointer;
 }
 .pagination-list--start-btn {
   cursor: pointer;
@@ -260,7 +269,7 @@ main {
   border-radius: 4px;
   background-color: rgba(0,0,0,0.2);
   border: 1px solid black;
-  width: 30px;
+  padding: 0 10px;
   height: 40px;
   display: flex;
   justify-content: center;
@@ -279,4 +288,35 @@ main {
 }
 .pagination-list--btn:hover {
   background-color: rgba(0,0,0,0.4);
+}
+.pagination-list--end-btn {
+  cursor: pointer;
+  position: relative;
+  border-radius: 4px;
+  background-color: rgba(0,0,0,0.2);
+  border: 1px solid black;
+  padding: 0 10px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1em
+}
+.pagination-list--end-btn:hover {
+  background-color: rgba(0,0,0,0.4);
+}
+.pagination-list--end-btn::before {
+  content: "....";
+  font-size: 25px;
+  position: absolute;
+  left: -1.2em;
+  top: 40%;
+}
+.btn-current-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 0px 0px 10px black;
 }

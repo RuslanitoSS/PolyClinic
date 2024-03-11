@@ -30,13 +30,12 @@ export default function Home() {
     //10 стр вперёд
     for (let index = currentPage + 1; index <= Math.min(currentPage + pagesRenderRadius, lastPage); index++) {
       paginationList.push(index)
-    } 
+    }
 
-    /*  //кнопка "в конец". если Послденюю стр не видно
+     //кнопка "в конец". если Послденюю стр не видно
      if (currentPage + 10 < lastPage) {
       paginationList.push(lastPage)
-    } */
-    console.log(paginationList)
+    }
     return paginationList
   }
 
@@ -77,8 +76,14 @@ export default function Home() {
           isLoading ? <></> :
             <ul className="pagination-list">
               {formPaginationList(currentPage, lastPage).map(pageNumber =>
-                <li  className={pageNumber === 1 && currentPage-10 > 1 ? "pagination-list--start-btn" : "pagination-list--btn"}>
-                  <button onClick={() => { setCurrentPage(pageNumber) }}>
+                <li 
+                onClick={() => { setCurrentPage(pageNumber) }}
+                className={pageNumber === 1 && currentPage - 10 > 1 ? "pagination-list--start-btn" : 
+                pageNumber === lastPage && currentPage + 10 < lastPage ?  "pagination-list--end-btn" :
+                "pagination-list--btn"}>
+                  <button
+                    className={pageNumber === currentPage ? "btn-current-page" : ""}
+                  >
                     {pageNumber}
                   </button>
                 </li>
