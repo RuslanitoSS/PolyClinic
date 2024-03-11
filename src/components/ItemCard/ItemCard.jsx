@@ -5,13 +5,12 @@ import Modal from "@/components/Modal/Modal.jsx";
 const ItemCard = ({
     itemName,
     itemImgUrl,
-    AuthorImgUrl,
-    AuthorName,
-    AuthorSubs,
-    favourited
+    producers,
+    studios,
+
 }) => {
     const [modalActive, setModalActive] = useState(false);
-    const [isFavourite, setIsFavourite] = useState(favourited)
+    const [isFavourite, setIsFavourite] = useState(false)
 
     return (
         <div className="item--card">
@@ -66,13 +65,16 @@ const ItemCard = ({
                 </div>
 
                 <div className="card-bot--author">
-                    <img src={AuthorImgUrl} alt="" className="author-img" />
                     <div className="author-data">
                         <span className="author-name">
-                            {AuthorName}
+                            {studios.map(studio => 
+                                studio.name + ' '
+                                )}
                         </span>
                         <span className="author-subs">
-                            {AuthorSubs}
+                            {producers.map(producer => 
+                                producer.name + ' '
+                                )}
                         </span>
                     </div>
                 </div>
