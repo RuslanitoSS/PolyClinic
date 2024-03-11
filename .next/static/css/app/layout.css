@@ -183,20 +183,53 @@ meter {
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./src/css/globals.css ***!
   \*****************************************************************************************************************************************************************************************************************************************************************/
 main {
-  display: flex;
+/*   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 100vw;
+  align-items: center; */
   height: 100vh;
   background-color: #4a044e;
   color: whitesmoke;
   font-size: 16px;
   line-height: 25px;
+  overflow-x: hidden;
+}
+.container {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 1em;
 }
 .items-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
   justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  gap: 1em;
+  justify-items: center;
+  grid-column-gap: 1em;
+  column-gap: 1em;
+  grid-row-gap:  .75em;
+  row-gap:  .75em;
+}
+.search-bar {
+  background-color: black;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 0 auto;
+  border-radius: 8px;
+  padding: 0.75em 1em;
+  margin-bottom: 30px;
+}
+.search-bar--field {
+  border-bottom: solid 1px grey;
+  padding: 4px 6px;
+  margin: 0 12px 0 0;
+}
+.search-bar--submit {
+  border: solid 1px grey;
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out
+}
+.search-bar--submit:hover {
+  background-color: grey;
 }
